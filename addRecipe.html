@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Let Em Cook</title>
+        <link rel="stylesheet" href="./styles/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/bootstrap-icons.css">
+        <link href='./styles/styles.css' rel="stylesheet">
+    </head>
+    <body>
+        <form id="addRecipeForm">
+            <label for="recipeName">Recipe Name:</label>
+            <input type="text" id="recipeName" name="recipeName"><br><br>
+            
+            <label for="recipeIngredients">Ingredients:</label>
+            <textarea id="recipeIngredients" name="recipeIngredients"></textarea><br><br>
+        
+            <label for="recipeInstructions">Instructions:</label>
+            <textarea id="recipeInstructions" name="recipeInstructions"></textarea><br><br>
+        
+            <button onclick="window.location.href='foodCalendar.html'"type="submit" id="addRecipeButton">Add Recipe</button>
+        </form>
+        <script src="controller.js"></script>
+    </body>
+</html>

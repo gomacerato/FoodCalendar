@@ -1,0 +1,12 @@
+.imageSize{
+    height: 200;
+    width: 200;
+    align-content: center;
+}
+.cardStyle{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-width: 6;
+    border-color: rgb(72, 71, 71);
+}
