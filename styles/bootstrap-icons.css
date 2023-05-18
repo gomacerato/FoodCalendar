@@ -800,7 +800,6 @@ url("./fonts/bootstrap-icons.woff2") format("woff2");
 .bi-inbox::before { content: "\f40c"; }
 .bi-inboxes-fill::before { content: "\f40d"; }
 .bi-inboxes::before { content: "\f40e"; }
-.bi-infinity::before{content: "\f69E"}
 .bi-info-circle-fill::before { content: "\f40f"; }
 .bi-info-circle::before { content: "\f410"; }
 .bi-info-square-fill::before { content: "\f411"; }

@@ -1,0 +1,68 @@
+<html>
+
+	<head>
+	  <title>User Login</title>
+	  
+	  <style>
+			header {
+				text-align: center;
+			}
+		</style>
+		
+		<style>
+			body {
+				text-align: center;
+			}
+			
+			h1, p, input {
+			  text-align: center;
+			}	
+			
+		</style>
+		
+		<style>
+			.form-group {
+				display: block;
+				margin-bottom: 10px;
+			}
+		</style>
+		
+		<style>
+			body {
+				background-color: lightblue;
+				color: black;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<h1>User Login</h1>
+	  
+		<div class="position-relative text-black container text-center h-100 d-flex flex-column justify-content-center">
+
+			<form id="sign-in">
+			
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+
+				<div class="form-group">
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" required>
+				</div>
+				
+				<div class="form-group">
+					<input type="submit" value="Login">
+				</div>
+			
+			</form>
+			
+		</div>
+	  
+		<script src="script.js"></script>
+	  
+	</body>
+	
+</html>

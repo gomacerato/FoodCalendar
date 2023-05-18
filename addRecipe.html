@@ -1,25 +1,85 @@
 <html>
     <head>
+	
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Let Em Cook</title>
         <link rel="stylesheet" href="./styles/bootstrap.min.css">
         <link rel="stylesheet" href="./styles/bootstrap-icons.css">
         <link href='./styles/styles.css' rel="stylesheet">
+		
+		<link rel='icon' href="assets/Frying-Pan-with-Egg.png" />
+		
+		<style>
+			header {
+				text-align: left;
+			}
+		
+			body {
+				text-align: center;
+				background-color: lightblue;
+				color: black;
+			}
+			
+			h1, p, input {
+				text-align: center;
+			}
+			
+			textarea#recipeIngredients, textarea#recipeInstructions {
+				width: 400px;
+				height: 180px;
+				padding: 10px;
+				border-radius: 10px;
+				border: 1px solid #ccc;
+				outline: none;
+				resize: vertical;
+			}
+			
+			input[type="file"] {
+				margin-top: 10px;
+			}
+		
+			button {
+				padding: 10px 20px;
+				border-radius: 5px;
+				border: none;
+				background-color: #333;
+				color: #fff;
+				cursor: pointer;
+			}
+		
+			button:hover {
+				background-color: #555;
+			}
+		</style>
+		
     </head>
+	
     <body>
-        <form id="addRecipeForm">
-            <label for="recipeName">Recipe Name:</label>
-            <input type="text" id="recipeName" name="recipeName"><br><br>
-            
-            <label for="recipeIngredients">Ingredients:</label>
-            <textarea id="recipeIngredients" name="recipeIngredients"></textarea><br><br>
-        
-            <label for="recipeInstructions">Instructions:</label>
-            <textarea id="recipeInstructions" name="recipeInstructions"></textarea><br><br>
-        
-            <button onclick="window.location.href='foodCalendar.html'"type="submit" id="addRecipeButton">Add Recipe</button>
-        </form>
+	
+		<div class="position-relative text-black container text-center h-100 d-flex flex-column justify-content-center">
+	
+			<h1> Create Your Recipe! </h1>
+			
+			<form id="addRecipeForm">
+				<label for="recipeName">Recipe Name:</label>
+				<input type="text" id="recipeName" name="recipeName"><br><br>
+				
+				<label for="recipeIngredients">Ingredients:</label>
+				<textarea id="recipeIngredients" name="recipeIngredients"></textarea><br><br>
+			
+				<label for="recipeInstructions">Instructions:</label>
+				<textarea id="recipeInstructions" name="recipeInstructions"></textarea><br><br>
+				
+				<label for="recipePhoto">Photo:</label>
+				<input type="file" id="recipePhoto" name="recipePhoto"><br><br>
+			
+				<button onclick="window.location.href='foodCalendar.html'"type="submit" id="addRecipeButton">Add Recipe</button>
+			</form>
+		
+		</div>
+		
         <script src="controller.js"></script>
     </body>
+	
 </html>

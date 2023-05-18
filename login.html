@@ -1,0 +1,79 @@
+<html>
+	
+	<head>
+		<!--<title> Let 'em Cook </title>-->
+		<link rel='icon' href="assets/Frying-Pan-With-Egg.png" />
+		
+		<!--Meta Tags-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!--Bootstrap CSS-->
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/bootstrap-icon.css">
+		
+		<style>
+		
+			header {
+				text-align: center;
+			}
+			
+			body {
+				text-align: center;
+				background-color: lightblue;
+				color: black;
+			}
+			
+			h1, p, input {
+			  text-align: center;
+			}
+			
+			body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+    
+			.background-image {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				z-index: -1;
+			}
+		
+		</style>
+		
+	</head>
+	
+	<body>
+	
+		<!--Background Image-->
+		 <img class="background-image" src="assets/Login-Recipe-Page.jpg" alt="Background Image">
+			
+		<!--Landing Page-->
+		<div class="position-relative text-black container text-center h-100 d-flex flex-column justify-content-center">
+			<h1> 
+				<p> <span class='bold, italic, large-text'> Let 'em Cook </span> </p>
+			</h1>
+			<p> Create and store recipes on a whim!</p>
+			<p> Login to get started </p>
+			
+			<div>
+				<button type="button" onclick="document.location='sign-in.html'">
+					Sign in
+				<button type="button" onclick="document.location='sign-up.html'">
+					Sign up
+				<button type="button" onclick="document.location='forgot-password.html'">
+					Forgot password?
+			</div>
+		</div>
+		
+		<script src="scripts/bootstrap.bundle.min.js"></scripts>
+		
+	</body>
+	
+</html>
