@@ -51,6 +51,28 @@
 			button:hover {
 				background-color: #555;
 			}
+			
+			#picture-section {
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: left;
+				padding: 20px;
+			}
+    
+			#picture-section label {
+				display: block;
+			}
+    
+			#picture-section img {
+				max-width: 300px;
+				max-height: 300px;
+			}
+			
+			#picture-section input[type='file']{
+				margin-top: 10px;
+			}
+			
 		</style>
 		
     </head>
@@ -72,14 +94,32 @@
 				<textarea id="recipeInstructions" name="recipeInstructions"></textarea><br><br>
 				
 				<label for="recipePhoto">Photo:</label>
-				<input type="file" id="recipePhoto" name="recipePhoto"><br><br>
+				<input type="file" id="recipePhoto" name="recipePhoto" onchange="recipePhotoUpload(event)"><br><br>
 			
 				<button onclick="window.location.href='foodCalendar.html'"type="submit" id="addRecipeButton">Add Recipe</button>
 			</form>
-		
+			
+		<div id="picture-section">
+			<h3>Food!</h3>
+			<img id="recipeImage" src="assets/Frying-Pan-with-Egg.png" alt="Food!">
 		</div>
 		
         <script src="controller.js"></script>
+		
+		<script>
+			function recipePhotoUpload(event) {
+				const file = event.target.files[0];
+				const reader = new FileReader();
+
+			reader.onload = function (e) {
+				const imageElement = document.getElementById("recipeImage");
+				imageElement.src = e.target.result;
+			};
+
+			reader.readAsDataURL(file);
+			}
+		</script>
+		
     </body>
 	
 </html>

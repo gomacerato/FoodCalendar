@@ -1,0 +1,157 @@
+<html>
+	<head>
+		<title>User Profile</title>
+		<link rel="icon" href="assets/Frying-Pan-With-Egg.png" />
+
+		<style>
+			header {
+				text-align: center;
+			}
+		</style>
+
+		<style>
+			body {
+				text-align: center;
+			}
+
+			h1,
+			p,
+			input {
+				text-align: center;
+			}
+		</style>
+		
+		<style>
+			textarea#bio{
+				width: 400px;
+				height: 180px;
+				padding: 10px;
+				border-radius: 10px;
+				border: 1px solid #ccc;
+				outline: none;
+				resize: vertical;
+			}
+			
+			input[type="file"] {
+				margin-top: 10px;
+			}
+		
+			button {
+				padding: 10px 20px;
+				border-radius: 5px;
+				border: none;
+				background-color: #333;
+				color: #fff;
+				cursor: pointer;
+			}
+		
+		</style>
+
+		<style>
+			.form-group {
+				display: block;
+				margin-bottom: 10px;
+			}
+		</style>
+
+		<style>
+			body {
+				background-color: lightblue;
+				color: black;
+			}
+			#picture-section {
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: left;
+				padding: 20px;
+			}
+    
+			#picture-section label {
+				display: block;
+			}
+    
+			#picture-section img {
+				max-width: 300px;
+				max-height: 300px;
+			}
+			
+			#picture-section input[type='file']{
+				margin-top: 10px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+	
+		<h1>User Profile</h1>
+
+		<div class="position-relative text-black container text-center h-100 d-flex flex-column justify-content-center">
+		
+		<form id="profile-form">
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" readonly>
+			</div>
+
+			<div class="form-group">
+				<label for="bio">Bio:</label>
+				<textarea id="bio" name="bio"></textarea>
+			</div>
+
+			<div class="form-group">
+				<label for="picture">Profile Picture:</label>
+				<input type="file" id="picture" name="picture">
+			</div>
+
+			<div class="form-group">
+				<input type="submit" value="Save">
+			</div>
+		</form>
+		
+		<div id="picture-section">
+			<h3>Profile Picture</h3>
+			<img id="profile-picture" src="assets/blank-profile-picture.png" alt="Profile Picture">
+		</div>
+
+		<button id="delete-account">Delete Account</button>
+		</div>
+
+		<script src="script.js"></script>
+		
+		<script>
+			// Retrieve email from the URL or authentication system
+			const urlParams = new URLSearchParams(window.location.search);
+			const email = urlParams.get('email');
+			
+			// Set the email value to the input field
+			document.getElementById('email').value = email;
+
+			// Set the profile picture source
+			const profilePictureInput = document.getElementById('picture');
+			const profilePicture = document.getElementById('profile-picture');
+
+			profilePictureInput.addEventListener('change', function(event) {
+				const file = event.target.files[0];
+				const reader = new FileReader();
+
+				reader.onload = function(e) {
+					profilePicture.src = e.target.result;
+				};
+
+			reader.readAsDataURL(file);
+			});
+
+			// Set the email value to the input field
+			document.getElementById('email').value = email;
+		</script>
+	
+	</body>
+	
+</html>
