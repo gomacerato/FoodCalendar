@@ -1,0 +1,45 @@
+.imageSize {
+    height: 200px;
+    width: 200px;
+    align-self: center;
+  }
+  
+  .cardStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 6px solid rgb(72, 71, 71);
+    box-sizing: border-box;
+    padding-bottom: 5;
+  }
+  
+  .listStyle {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex; /* Add this line */
+    flex-wrap: wrap; /* Add this line */
+    justify-content: space-between; /* Add this line */
+  }
+  
+  .list li {
+    width: calc(33.33% - 20px);
+    margin: 5px;
+  }
+.titleS{
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+.descriptionS{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}

@@ -1,17 +1,57 @@
 <html>
+  <head>
+    <style>
+      header {
+        text-align: left;
+        background-color: lightblue;
+        padding: 20px;
+        
+      }
+
+      body {
+
+        background-image: url("../assets/index-page-background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        Overflow: hidden;
+      }
+
+      .site-title{
+        font-size: 40px;
+        color: white;
+        text-align: left;
+      }
+        
+      .site-title2{
+        font-size: 30px;
+        color:white;
+        text-align: left;
+      }
+        
+      .blogs-content h3{
+        font-size: 30px;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head> 
     <body>
-      <nav>
         <div class="site-title">
-          <a href="/"><h1>Let 'em Cook</h1></a>
+          <h1>Let 'em Cook</h1>
           <p>By: Sam, Gabe, and Chris</p>
         </div>
-        <ul>
-          <li><a href="/">Recipes</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/recipes/create">Create a recipe!</a></li>
+
+        <div>
+           <ul style = "list-style: none; align-items: flex-start">
+          <li><a class = "site-title2" href="/">Recipes</a></li>
+          <li><a class = "site-title2" href="/about">About</a></li>
+          <li><a class = "site-title2" href="/recipes/create">Create a recipe!</a></li>
         </ul>
-      </nav>
-        <div class = "blogs content">
+        </div>
+
+
+       
+        <div class = "blogs content site-title">
             <h2>All Recipes</h2>
 
             <% if (recipes.length > 0) { %>

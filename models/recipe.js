@@ -17,6 +17,10 @@ const recipeSchema = new Schema({
     },
     recipeTime: {
         type: String
+    },
+    recipeImage: {
+        data: Buffer,
+        contentType: String
     }
 });
 

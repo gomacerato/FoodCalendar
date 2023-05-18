@@ -1,12 +1,84 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../public/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Let Em Cook</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap-icons.css">
+        <link href='../css/styles.css' rel="stylesheet">
+		
+		<link rel='icon' href="assets/Frying-Pan-with-Egg.png" />
+		
+		<style>
+			header {
+				text-align: left;
+			}
+		
+			body {
+				text-align: center;
+				background-color: lightblue;
+				color: black;
+			}
+			
+			h1, p, input {
+				text-align: center;
+			}
+			
+			textarea#recipeIngredients, textarea#recipeInstructions {
+				width: 400px;
+				height: 180px;
+				padding: 10px;
+				border-radius: 10px;
+				border: 1px solid #ccc;
+				outline: none;
+				resize: vertical;
+			}
+			
+			input[type="file"] {
+				margin-top: 10px;
+			}
+		
+			button {
+				padding: 10px 20px;
+				border-radius: 5px;
+				border: none;
+				background-color: #333;
+				color: #fff;
+				cursor: pointer;
+			}
+		
+			button:hover {
+				background-color: #555;
+			}
+			
+			#picture-section {
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: left;
+				padding: 20px;
+			}
+    
+			#picture-section label {
+				display: block;
+			}
+    
+			#picture-section img {
+				max-width: 300px;
+				max-height: 300px;
+			}
+			
+			#picture-section input[type='file']{
+				margin-top: 10px;
+			}
+			
+		</style>
     </head>
     <body>
-        <div class="create-recipe content">
-            <form action = "/recipes" method = "POST">
+        <div class="position-relative text-black container h-100 d-flex flex-column justify-content-center">
+            <form id = "recipeForm" action = "/recipes" method = "POST">
                 <label for = "name">Recipe Name: </label>
-                <input type = "text" id = "name" name = "recipeName">
+                <input type = "text" id = "name" name = "recipeName" placeholder = "Recipe Name">
                 <label for = "description">Recipe Description: </label>
                 <textarea id = "description" name = "recipeDescription"></textarea>
                 <label for = "ingredient">Recipe Ingredients: </label>
@@ -15,8 +87,29 @@
                 <textarea id = "instruction" name = "recipeInstruction"></textarea>
                 <label for = "timetomake">Time to Make: </label>
                 <textarea id = "timetomake" name = "recipeTime"></textarea>
+                <label for="recipePhoto">Photo:</label>
+				<input type="file" id="recipePhoto" name="recipePhoto" onchange="recipePhotoUpload(event)">
                 <button>Submit</button>
             </form>
+            <br><br>
         </div>
+
+        <div id="picture-section">
+			<h3>Image:</h3>
+			<img id="recipeImage" src="" alt="">
+		</div>
+        <script>
+            function recipePhotoUpload(event) {
+              const file = event.target.files[0];
+              const reader = new FileReader();
+      
+            reader.onload = function (e) {
+              const imageElement = document.getElementById("recipeImage");
+              imageElement.src = e.target.result;
+            };
+      
+            reader.readAsDataURL(file);
+            }
+          </script>
     </body>
 </html>
