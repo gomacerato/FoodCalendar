@@ -1,0 +1,29 @@
+<html>
+    <body>
+      <nav>
+        <div class="site-title">
+          <a href="/"><h1>Let 'em Cook</h1></a>
+          <p>By: Sam, Gabe, and Chris</p>
+        </div>
+        <ul>
+          <li><a href="/">Recipes</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/recipes/create">Create a recipe!</a></li>
+        </ul>
+      </nav>
+        <div class = "blogs content">
+            <h2>All Recipes</h2>
+
+            <% if (recipes.length > 0) { %>
+                <% recipes.forEach(recipes => { %>
+                  <a class="single" href="/recipes/<%= recipes._id %>">
+                    <h3 class="title"><%= recipes.recipeName %></h3>
+                    <p class="snippet"><%= recipes.recipeDescription %></p>
+                  </a>
+                <% }) %>
+              <% } else { %>
+                <p>There are no recipes to display...</p>
+              <% } %>
+        </div>
+    </body>
+</html>

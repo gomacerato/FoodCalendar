@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../public/styles.css">
+    </head>
+    <body>
+        <div class="create-recipe content">
+            <form action = "/recipes" method = "POST">
+                <label for = "name">Recipe Name: </label>
+                <input type = "text" id = "name" name = "recipeName">
+                <label for = "description">Recipe Description: </label>
+                <textarea id = "description" name = "recipeDescription"></textarea>
+                <label for = "ingredient">Recipe Ingredients: </label>
+                <textarea id = "ingredient" name = "recipeIngredient"></textarea>
+                <label for = "instruction">Recipe Instructions: </label>
+                <textarea id = "instruction" name = "recipeInstruction"></textarea>
+                <label for = "timetomake">Time to Make: </label>
+                <textarea id = "timetomake" name = "recipeTime"></textarea>
+                <button>Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
