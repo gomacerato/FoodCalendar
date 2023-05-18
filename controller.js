@@ -3,12 +3,9 @@ const inputTitle = document.querySelector('#recipeTitle');
 const inputDescrip = document.querySelector('#recipeDescription');
 const recipeList = document.querySelector('#recipeCards');
 
-
-var listStart = 7;
-function createLi(start){
+function createLi(){
     const li = document.createElement('li');
     li.className = "cardStyle";
-    li.id = `li${start}`;
     const outerDiv = document.createElement('div');
     outerDiv.className= "container";
     const image = document.createElement('img');
@@ -22,9 +19,8 @@ function createLi(start){
     description.textContent = inputDescrip.value;
     const a = document.createElement('a');
     a.textContent = "View Recipe";
-    a.href="recipePage.html";
+    a.href="#";
     a.className="btn btn-primary";
-    a.onclick=showRecipeItem(`li${listStart}`);
     li.appendChild(outerDiv);
     outerDiv.appendChild(image);
     outerDiv.appendChild(title);
@@ -37,8 +33,7 @@ function createLi(start){
 
 form.addEventListener('submit', (event)=>{
     event.preventDefault();
-    const li = createLi(listStart);
+    const li = createLi();
     recipeList.appendChild(li);
-    listStart = listStart + 1;
 });
 

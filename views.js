@@ -1,5 +1,3 @@
-
-
 function showRecipeItem(listNumber){
     const listItem = document.getElementById(listNumber);
     // Select the inner elements within the list item
