@@ -49,46 +49,84 @@
             <input class="text-center"placeholder="SEARCH BAR"></input>
             <button>Randomize</button>
         </div>
-        <div class="row px-5 py-5" id="recipeCards">
-            <div class="col-md-4 mb-5">
-              <div class="card cardStyle">
-                <img class="card-img-top mt-2 imageSize" src="./assets/Spaghetti-Bolognese.jpeg" alt="Spaghetti Bolognese">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Spaghetti Bolognese</h5>
-                  <a href="#" class="btn btn-primary">View Recipe</a>
+
+        <!--form-->
+        <form id="recipeForm">
+            <label for="recipeTitle">Recipe Title:</label>
+            <input type="text" id="recipeTitle" placeholder="Title"><br><br>
+          
+            <label for="recipeDescription">Description:</label>
+            <input type="text" id="recipeDescription" placeholder="Description">
+          
+            <button type="submit">Create Recipe</button>
+          </form>
+        <!---cards-->
+        <div class="row px-5 py-5 d-flex listStyle"><!--1-->
+            <ul class="list" id="recipeCards">
+                <li class="cardStyle" id="li1">
+                        <div class="container">
+                            <img class="imageSize"src="assets/Spaghetti-Bolognese.jpeg">
+                            <div>
+                                <h5 class="titleS">Spaghetti-Bolognese</h5>
+                                <p class="descriptionS">Beef and tomato pasta</p>
+                                <a onclick="{()=>showRecipeItem('li1')}"  href="recipePage.html" class="btn btn-primary">View Recipe</a>
+                            </div>
+                        </div>
+                </li>
+                <li class="cardStyle" id="li2"><!--2-->
+                    <div class="container">
+                        <img class="imageSize"src="assets/RoastChicken.jpeg">
+                        <div>
+                            <h5 class="titleS">Roast Chicken</h5>
+                            <p class="descriptionS">Baked chicken with vegetables.</p>
+                            <a href="recipePage.html" class="btn btn-primary">View Recipe</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="cardStyle" id="li3"><!--3-->
+                    <div class="container">
+                        <img class="imageSize"src="assets/.jpeg">
+                        <div>
+                            <h5 class="titleS">TITLE</h5>
+                            <p class="descriptionS">DESCRIPTION</p>
+                            <a href="recipePage.html" class="btn btn-primary">View Recipe</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="cardStyle" id="li4"><!--4-->
+                    <div class="container">
+                        <img class="imageSize"src="assets/Spaghetti-Bolognese.jpeg">
+                        <div>
+                            <h5 class="titleS">TITLE</h5>
+                            <p class="descriptionS">DESCRIPTION</p>
+                            <a href="recipePage.html" class="btn btn-primary">View Recipe</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="cardStyle" id="li5"><!--5-->
+                <div class="container">
+                    <img class="imageSize"src="assets/Spaghetti-Bolognese.jpeg">
+                    <div>
+                        <h5 class="titleS">TITLE</h5>
+                        <p class="descriptionS">DESCRIPTION</p>
+                        <a href="recipePage.html" class="btn btn-primary">View Recipe</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card cardStyle">
-                <img class="card-img-top imageSize mt-2" src="./assets/RoastChicken.jpeg" alt="Roast Chicken">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Roast Chicken</h5>
-                  <a href="#" class="btn btn-primary">View Recipe</a>
+                </li>
+                <li class="cardStyle" id="li6"><!--6-->
+                <div class="container">
+                    <img class="imageSize"src="assets/Spaghetti-Bolognese.jpeg">
+                    <div>
+                        <h5 class="titleS">TITLE</h5>
+                        <p class="descriptionS">DESCRIPTION</p>
+                        <a href="recipePage.html" class="btn btn-primary">View Recipe</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img class="card-img-top" src="chocolate-cake.jpg" alt="Chocolate Cake">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Chocolate Cake</h5>
-                  <a href="#" class="btn btn-primary">View Recipe</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                  <img class="card-img-top" src="spaghetti-bolognese.jpg" alt="Spaghetti Bolognese">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Spaghetti Bolognese</h5>
-                    <p class="card-text">A classic Italian dish made with tomato sauce, ground beef, and spaghetti.</p>
-                    <a href="#" class="btn btn-primary">View Recipe</a>
-                  </div>
-                </div>
-              </div>
+                </li>
+            </ul>
         </div>
         <script src="scripts/bootstrap.bundle.min.js"></script>
         <script src="controller.js"></script>
+        <script src="views.js"></script>
     </body>
 </html>

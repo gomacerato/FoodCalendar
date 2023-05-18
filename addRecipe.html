@@ -8,18 +8,16 @@
         <link href='./styles/styles.css' rel="stylesheet">
     </head>
     <body>
-        <form id="addRecipeForm">
-            <label for="recipeName">Recipe Name:</label>
-            <input type="text" id="recipeName" name="recipeName"><br><br>
-            
-            <label for="recipeIngredients">Ingredients:</label>
-            <textarea id="recipeIngredients" name="recipeIngredients"></textarea><br><br>
-        
-            <label for="recipeInstructions">Instructions:</label>
-            <textarea id="recipeInstructions" name="recipeInstructions"></textarea><br><br>
-        
-            <button onclick="window.location.href='foodCalendar.html'"type="submit" id="addRecipeButton">Add Recipe</button>
-        </form>
+        <form id="recipeForm">
+            <label for="recipeTitle">Recipe Title:</label>
+            <input type="text" id="recipeTitle" placeholder="Title"><br><br>
+          
+            <label for="recipeDescription">Description:</label>
+            <input type="text" id="recipeDescription" placeholder="Description">
+          
+            <button formaction="foodCalendar.html" onclick="window.location.href='foodCalendar.html'" type="submit">Create Recipe</button>
+          </form>
         <script src="controller.js"></script>
+        <script src="views.js"></script>
     </body>
 </html>
